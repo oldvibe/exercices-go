@@ -8,7 +8,7 @@ import (
 
 func main() {
 	arg := os.Args[1:]
-	 arr2 := []rune(arg[2])
+	arr2 := []rune(arg[2])
 	for _, ch := range arg[0] {
 		for _, ch1 := range arg[1] {
 			if ch == ch1 {
