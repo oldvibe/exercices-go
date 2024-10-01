@@ -25,5 +25,5 @@ for i, ch := range arg {
 		 
 	}
 }
-	fmt.Print(res)
+	fmt.Println(res)
 }

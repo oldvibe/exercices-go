@@ -1,22 +1,29 @@
 package main
 
 import (
+	"fmt"
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
-func main(){
-	arg := os.Args[1:]
-	if (len(arg) != 1) {
-		return 
+func main() {
+	if len(os.Args) != 2 {
+		return
 	}
-	for _, ch := range arg[0] {
-		if ch < 33 {
-			continue
-		} else {
-			z01.PrintRune(ch)
-		}
+
+	arg := os.Args[1]
+
+	res := ""
+	inWord := false
+
+for i, ch := range arg {
+	if ch != ' ' && ch != '\t' {
+		if inWord && i- 1 > 0 && (arg[i - 1] == ' ' || arg[i - 1] == '\t') {
+			res += " "
+		} 
+		res += string(ch)
+		inWord = true
+		 
 	}
-	z01.PrintRune('\n')
+}
+	fmt.Println(res)
 }

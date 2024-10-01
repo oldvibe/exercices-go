@@ -26,10 +26,8 @@ func main() {
 	}
 	//fmt.Println(res)
 	if string(res) == arg[0]  {
-		fmt.Println(1)
-	} else {
-		fmt.Println(0)
-
-	}
+		fmt.Print(arg[0])
+	} 
+	fmt.Println()
 	
 }

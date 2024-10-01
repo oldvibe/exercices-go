@@ -2,15 +2,12 @@ package main
 
 import (
 	"fmt"
-
-	piscine "piscine/cameltosnakecase"
+	"piscine/itoa"
 )
 
 func main() {
-	fmt.Println(piscine.CamelToSnakeCase("HelloWorld"))
-	fmt.Println(piscine.CamelToSnakeCase("helloWorld"))
-	fmt.Println(piscine.CamelToSnakeCase("camelCase"))
-	fmt.Println(piscine.CamelToSnakeCase("CAMELtoSnackCASE"))
-	fmt.Println(piscine.CamelToSnakeCase("camelToSnakeCase"))
-	fmt.Println(piscine.CamelToSnakeCase("hey2"))
+    fmt.Println(piscine.Itoa(12345))
+    fmt.Println(piscine.Itoa(0))
+    fmt.Println(piscine.Itoa(-1234))
+    fmt.Println(piscine.Itoa(987654321))
 }
